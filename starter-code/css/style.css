@@ -1,1 +1,33 @@
 /* TODO: Make it awesome */
+body {
+  background-color: #b19097;
+}
+
+header {
+  padding: 20px 2;
+  color: black;
+  font-weight: bold;
+  font-family: monospace san-serif;
+  font-size: 40px;
+  border-style: double;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  font-weight: bold;
+  font-family: monospace san-serif;
+  font-size: 40px;
+  border-style: double;  
+  text-align: center;
+
+ul > li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.copy {
+  font-family: monospace san-serif;
+
+}
