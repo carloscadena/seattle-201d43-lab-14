@@ -2,6 +2,7 @@
 
 'use strict';
 
+var itemsInCart = 0;
 // Set up an empty cart for use on this page.
 var cart = new Cart([]);
 
@@ -33,23 +34,33 @@ function handleSubmit(event) {
 
 }
 
-// TODO: Add the selected item and quantity to the cart
+
+
+// DONE: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   var itemPicked = document.getElementById('items').value;
   var amountPicked = document.getElementsByTagName('input')[0].value;
   cart.addItem(itemPicked, amountPicked);
   // DONE: suss out the item picked from the select list
   // DONE: get the quantity
-  // TODO: using those, add one item to the Cart
-  // var submitNewItem = document.getElementsByTagName('input')[1];
-  // submitNewItem.addEventListener('click', handleSubmit);
+  // DONE: using those, add one item to the Cart
+  itemsInCart ++;
+  updateCounter();
+} 
+
+// DONE: Update the cart count in the header nav with the number of items in the Cart
+function updateCounter() {
+  var updateCount = document.getElementById('itemCount');
+  updateCount.textContent = itemsInCart;
 }
 
-// TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
+  var itemPicked = document.getElementById('items').value;
+  var amountPicked = document.getElementsByTagName('input')[0].value;
+  var cartContents = document.getElementById('cartContents');
+  cartContents.textContent = `Item: ${itemPicked} quantity: ${amountPicked} `;
   // TODO: Get the item and quantity from the form
   // TODO: Add a new element to the cartContents div with that information
 }
