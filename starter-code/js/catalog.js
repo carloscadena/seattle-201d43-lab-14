@@ -2,9 +2,10 @@
 
 'use strict';
 
-var itemsInCart = 0;
 // Set up an empty cart for use on this page.
 var cart = new Cart([]);
+
+
 
 // On screen load, we call this method to put all of the busmall options
 // (the things in the Product.allProducts array) into the drop down list.
@@ -44,14 +45,12 @@ function addSelectedItemToCart() {
   // DONE: suss out the item picked from the select list
   // DONE: get the quantity
   // DONE: using those, add one item to the Cart
-  itemsInCart ++;
-  updateCounter();
 } 
 
 // DONE: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
   var updateCount = document.getElementById('itemCount');
-  updateCount.textContent = itemsInCart;
+  updateCount.textContent = cart.items.length;
 }
 
 
