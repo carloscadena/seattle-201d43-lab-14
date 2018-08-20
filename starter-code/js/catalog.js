@@ -29,7 +29,7 @@ function handleSubmit(event) {
 
   // Do all the things ...
   addSelectedItemToCart();
-  cart.saveToLocalStorage(cart);
+  cart.saveToLocalStorage();
   updateCounter();
   updateCartPreview();
 
